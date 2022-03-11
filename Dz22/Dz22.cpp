@@ -17,11 +17,11 @@ int main() {
 		cout << *(arr1 + i) << ", ";
 	cout << "\b\b]\n";
 	
-	for (int i = 1; i < 10; i += 2) {
+	for (int i = 0; i < 10; i += 2) {
 		if (i < 10) {
 			int tmp = *(arr1 + i);
-			*(arr1 + i) = *(arr1 + i - 1);
-			*(arr1 + i - 1) = tmp;
+			*(arr1 + i) = *(arr1 + i + 1);
+			*(arr1 + i + 1) = tmp;
 		}
 	}
 
@@ -52,11 +52,11 @@ void degree(int *var, int num) {
 //Задача 1(лол???)
 template <typename T> void swapNum(T arr[], int length) {
 	cout << "Конечный массив:\n[";
-	for (int i = 1; i < length; i += 2) {
+	for (int i = 0; i < length; i += 2) {
 		if (i < length) {
 			T tmp = *(arr + i);
-			*(arr + i) = *(arr + i - 1);
-			*(arr + i - 1) = tmp;
+			*(arr + i) = *(arr + i + 1);
+			*(arr + i + 1) = tmp;
 		}
 		cout << *(arr + i) << ", ";
 	}
